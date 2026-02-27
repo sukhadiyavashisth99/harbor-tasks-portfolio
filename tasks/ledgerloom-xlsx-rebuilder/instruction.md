@@ -23,14 +23,14 @@ Requirements:
 
 2. Normalize categories using the following mapping:
 
-   Groc.      → Groceries
-   Transport  → Transport
-   Utilities  → Utilities
-   Food       → Food
-   Rent       → Rent
-   Health     → Health
-   Income     → Income
-   Other      → Other
+   Groc.      -> Groceries
+   Transport  -> Transport
+   Utilities  -> Utilities
+   Food       -> Food
+   Rent       -> Rent
+   Health     -> Health
+   Income     -> Income
+   Other      -> Other
 
    Any category not listed above should default to "Other".
 
