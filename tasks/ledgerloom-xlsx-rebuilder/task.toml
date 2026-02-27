@@ -1,22 +1,14 @@
 version = "1.0"
 
 [metadata]
+author_name = "Vashisth Sukhadiya" 
+author_email = "sukhadiyavashisth99@gmail.com"
+difficulty = "medium"
+category = "file_manipulation"
+tags = ["xlsx", "spreadsheets", "openpyxl", "report-generation"]
 
 [verifier]
-timeout_sec = 600.0
+timeout_sec = 120.0
 
 [agent]
-timeout_sec = 600.0
-
-[environment]
-build_timeout_sec = 600.0
-cpus = 1
-memory_mb = 2048
-storage_mb = 10240
-gpus = 0
-allow_internet = true
-mcp_servers = []
-
-[verifier.env]
-
-[solution.env]
+timeout_sec = 120.0

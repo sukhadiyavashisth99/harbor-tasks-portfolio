@@ -9,3 +9,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --no-cache-dir pytest openpyxl
 
 # Harbor copies task files into /app; keep it simple.
+RUN pip install --no-cache-dir uv
