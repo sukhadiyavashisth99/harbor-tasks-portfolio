@@ -1,29 +1,31 @@
-You’re given a Harbor task environment with a CLI toolchain already set up. Your goal is to produce a valid Excel report at:
+You are working in a Harbor task environment with a Python toolchain available.
 
-/output/final_report.xlsx
+Inside the environment, you are provided with a CSV file located at:
 
-The report must contain two sheets:
+    /solution/fixtures/ledger_dump.csv
 
-1) Transactions
-- Header row must be exactly:
-  txn_id, date, description, category, amount
-- Dates must be normalized to ISO format YYYY-MM-DD
-- Categories must be normalized using this mapping:
-  Groc. -> Groceries
-  Transport -> Transport
-  Utilities -> Utilities
-  Food -> Food
-  Rent -> Rent
-  Health -> Health
-  Income -> Income
-  Other -> Other
+This file contains transaction data with the following columns:
 
-2) Summary
-- Two columns: Category, Total
-- One row per category that appears in Transactions (sum of amount)
-- Final row labeled "Grand Total" with the sum of all category totals
+    txn_id, date, description, amount, category
 
-Notes:
-- Amounts can be negative (spend) or positive (income/refunds).
-- Totals must be numeric (not stored as text).
-- Output must be a real .xlsx file that can be opened in Excel.
+Your job is to generate an Excel report at:
+
+    /output/final_report.xlsx
+
+The Excel file must contain exactly two sheets:
+
+1) "Transactions"
+   - Columns: txn_id, date, description, category, amount
+   - Dates must be normalized to ISO format: YYYY-MM-DD
+   - Categories must be mapped using the provided mapping logic
+   - Preserve numeric precision for amounts
+
+2) "Summary"
+   - Two columns: Category, Total
+   - One row per category (sorted alphabetically)
+   - A final row labeled "Grand Total"
+   - Totals must be rounded to 2 decimal places
+
+The output file must be written to /output/final_report.xlsx.
+
+Assume the input file exists and contains valid CSV data.

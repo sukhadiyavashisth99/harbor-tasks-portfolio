@@ -1,0 +1,12 @@
+txn_id,date,description,category,amount
+TXN-0001,01/05/2026,HEB Grocery - Plano,Groc.,-63.42
+TXN-0002,2026-01-06,Shell Gas #104,Transport,-38.17
+TXN-0003,2026/01/07,Electricity Bill Jan,Utilities,-121.09
+TXN-0004,01-08-2026,Chipotle lunch,Food,-14.86
+TXN-0005,2026-01-09,Apartment Rent,Rent,-1450.00
+TXN-0006,2026-01-10,Walgreens pharmacy,Health,-22.31
+TXN-0007,2026-01-11,Payroll Deposit,Income,2450.00
+TXN-0008,2026-01-12,Amazon marketplace,Other,-29.99
+TXN-0009,2026-01-12,HEB Grocery - Frisco,Groc.,-41.27
+TXN-0010,01/13/2026,Uber trip to campus,Transport,-18.75
+TXN-0011,2026-01-14,Refund - Utility overpay,Utilities,15.00

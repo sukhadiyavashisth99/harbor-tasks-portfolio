@@ -1,0 +1,14 @@
+txn_id,date,description,amount,category
+TXN-001,01/05/2026,January rent,-1200.00,Rent
+TXN-002,2026-01-06,Electric bill,-45.50,Utilities
+TXN-003,2026/01/07,Water bill,-50.63,Utilities
+TXN-004,01-08-2026,Bus pass,-30.00,Transport
+TXN-005,08-01-2026,Rideshare,-23.71,Transport
+TXN-006,2026-01-09,Grocery run,-42.37,Groc.
+TXN-007,2026-01-10,Pharmacy,-63.98,Health
+TXN-008,2026-01-11,Stationery,-12.00,Other
+TXN-009,2026-01-11,Small fee,-0.49,Other
+TXN-010,2026-01-12,Salary payment,3000.00,Income
+TXN-011,2026-01-13,Tax withholding,-150.00,Income
+TXN-012,01/14/2026,Lunch,10.00,Food
+TXN-013,2026-01-14,Lunch adjustment,-10.00,Food

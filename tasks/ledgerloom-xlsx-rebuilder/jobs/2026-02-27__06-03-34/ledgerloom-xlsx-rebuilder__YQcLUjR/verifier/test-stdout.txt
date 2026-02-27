@@ -1,3 +1,0 @@
-Wrote /output/final_report.xlsx
-.........                                                                [100%]
-9 passed in 0.16s

@@ -1,6 +1,0 @@
-Using CPython 3.12.12 interpreter at: /usr/local/bin/python
-Creating virtual environment at: /tmp/venv
-Activate with: source /tmp/venv/bin/activate
-Wrote /output/final_report.xlsx
-.........                                                                [100%]
-9 passed in 0.14s
