@@ -1,0 +1,29 @@
+{
+    "id": "0894071b-c9a3-43f8-899b-149b2a760e56",
+    "started_at": "2026-02-27T06:03:34.355928",
+    "finished_at": "2026-02-27T06:03:42.678890",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "oracle__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "ledgerloom-xlsx-rebuilder__YQcLUjR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}
