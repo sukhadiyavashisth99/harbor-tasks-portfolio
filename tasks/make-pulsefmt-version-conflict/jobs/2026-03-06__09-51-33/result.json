@@ -1,0 +1,29 @@
+{
+    "id": "2e749903-1fb8-47c6-ab47-14f842ecfde0",
+    "started_at": "2026-03-06T09:51:33.442922",
+    "finished_at": "2026-03-06T09:51:41.670580",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "oracle__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "make-pulsefmt-version-conflict__bji9kvY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

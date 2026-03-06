@@ -1,0 +1,29 @@
+version = "1.0"
+
+[metadata]
+name = "make-pulsefmt-version-conflict"
+description = "Resolve a local dependency version conflict in a GNU Make build where the project incorrectly pins pulsefmt 1.0 while the application requires the pulsefmt 2.0 API."
+author = "Vashisth Sukhadiya"
+email = "sukhadiyavashisth99@gmail.com"
+difficulty = "medium"
+category = "build-systems"
+tags = ["make", "dependencies", "version-conflict", "build-systems"]
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[solution.env]

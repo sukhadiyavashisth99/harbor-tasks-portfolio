@@ -1,0 +1,122 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+__________________ test_show_config_reports_resolved_version ___________________
+
+    def test_show_config_reports_resolved_version():
+        out = run(["make", "show-config"])
+>       assert "pulsefmt_version=2.0" in out
+E       AssertionError: assert 'pulsefmt_version=2.0' in 'pulsefmt_version=1.0\ndeps_dir=deps/pulsefmt-1.0\n'
+
+tests/test_outputs.py:22: AssertionError
+_____________________________ test_build_succeeds ______________________________
+
+    def test_build_succeeds():
+        run(["make", "clean"])
+>       run(["make"])
+
+tests/test_outputs.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cmd = ['make'], cwd = PosixPath('/project')
+
+    def run(cmd, cwd=ROOT):
+        result = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True)
+>       assert result.returncode == 0, (
+            f"command failed: {cmd}\n"
+            f"stdout:\n{result.stdout}\n"
+            f"stderr:\n{result.stderr}"
+        )
+E       AssertionError: command failed: ['make']
+E         stdout:
+E         mkdir -p build/obj
+E         gcc -Wall -Wextra -Werror -std=c11 -Ideps/pulsefmt-1.0/include -c src/main.c -o build/obj/main.o
+E         
+E         stderr:
+E         src/main.c: In function ‘main’:
+E         src/main.c:6:5: error: unknown type name ‘pf_context’
+E             6 |     pf_context ctx;
+E               |     ^~~~~~~~~~
+E         src/main.c:9:5: error: implicit declaration of function ‘pf_context_init’ [-Werror=implicit-function-declaration]
+E             9 |     pf_context_init(&ctx, "cache-audit", 7);
+E               |     ^~~~~~~~~~~~~~~
+E         src/main.c:10:21: error: passing argument 1 of ‘pf_render_total’ makes integer from pointer without a cast [-Werror=int-conversion]
+E            10 |     pf_render_total(&ctx, 1048576ULL, rendered, sizeof(rendered));
+E               |                     ^~~~
+E               |                     |
+E               |                     int *
+E         In file included from src/main.c:3:
+E         deps/pulsefmt-1.0/include/pulsefmt.h:7:38: note: expected ‘uint64_t’ {aka ‘long unsigned int’} but argument is of type ‘int *’
+E             7 | const char *pf_render_total(uint64_t total_bytes);
+E               |                             ~~~~~~~~~^~~~~~~~~~~
+E         src/main.c:10:5: error: too many arguments to function ‘pf_render_total’
+E            10 |     pf_render_total(&ctx, 1048576ULL, rendered, sizeof(rendered));
+E               |     ^~~~~~~~~~~~~~~
+E         In file included from src/main.c:3:
+E         deps/pulsefmt-1.0/include/pulsefmt.h:7:13: note: declared here
+E             7 | const char *pf_render_total(uint64_t total_bytes);
+E               |             ^~~~~~~~~~~~~~~
+E         cc1: all warnings being treated as errors
+E         make: *** [Makefile:26: build/obj/main.o] Error 1
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['make'], returncode=2, stdout='mkdir -p build/obj\ngcc -Wall -Wextra -Werror -std=c11 -Ideps/pu...      ^~~~~~~~~~~~~~~\ncc1: all warnings being treated as errors\nmake: *** [Makefile:26: build/obj/main.o] Error 1\n').returncode
+
+tests/test_outputs.py:13: AssertionError
+_________________________ test_binary_output_is_exact __________________________
+
+    def test_binary_output_is_exact():
+        if not BIN.exists():
+>           run(["make"])
+
+tests/test_outputs.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cmd = ['make'], cwd = PosixPath('/project')
+
+    def run(cmd, cwd=ROOT):
+        result = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True)
+>       assert result.returncode == 0, (
+            f"command failed: {cmd}\n"
+            f"stdout:\n{result.stdout}\n"
+            f"stderr:\n{result.stderr}"
+        )
+E       AssertionError: command failed: ['make']
+E         stdout:
+E         gcc -Wall -Wextra -Werror -std=c11 -Ideps/pulsefmt-1.0/include -c src/main.c -o build/obj/main.o
+E         
+E         stderr:
+E         src/main.c: In function ‘main’:
+E         src/main.c:6:5: error: unknown type name ‘pf_context’
+E             6 |     pf_context ctx;
+E               |     ^~~~~~~~~~
+E         src/main.c:9:5: error: implicit declaration of function ‘pf_context_init’ [-Werror=implicit-function-declaration]
+E             9 |     pf_context_init(&ctx, "cache-audit", 7);
+E               |     ^~~~~~~~~~~~~~~
+E         src/main.c:10:21: error: passing argument 1 of ‘pf_render_total’ makes integer from pointer without a cast [-Werror=int-conversion]
+E            10 |     pf_render_total(&ctx, 1048576ULL, rendered, sizeof(rendered));
+E               |                     ^~~~
+E               |                     |
+E               |                     int *
+E         In file included from src/main.c:3:
+E         deps/pulsefmt-1.0/include/pulsefmt.h:7:38: note: expected ‘uint64_t’ {aka ‘long unsigned int’} but argument is of type ‘int *’
+E             7 | const char *pf_render_total(uint64_t total_bytes);
+E               |                             ~~~~~~~~~^~~~~~~~~~~
+E         src/main.c:10:5: error: too many arguments to function ‘pf_render_total’
+E            10 |     pf_render_total(&ctx, 1048576ULL, rendered, sizeof(rendered));
+E               |     ^~~~~~~~~~~~~~~
+E         In file included from src/main.c:3:
+E         deps/pulsefmt-1.0/include/pulsefmt.h:7:13: note: declared here
+E             7 | const char *pf_render_total(uint64_t total_bytes);
+E               |             ^~~~~~~~~~~~~~~
+E         cc1: all warnings being treated as errors
+E         make: *** [Makefile:26: build/obj/main.o] Error 1
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['make'], returncode=2, stdout='gcc -Wall -Wextra -Werror -std=c11 -Ideps/pulsefmt-1.0/include -...      ^~~~~~~~~~~~~~~\ncc1: all warnings being treated as errors\nmake: *** [Makefile:26: build/obj/main.o] Error 1\n').returncode
+
+tests/test_outputs.py:13: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_outputs.py::test_show_config_reports_resolved_version - Ass...
+FAILED tests/test_outputs.py::test_build_succeeds - AssertionError: command f...
+FAILED tests/test_outputs.py::test_binary_output_is_exact - AssertionError: c...
+3 failed in 0.14s

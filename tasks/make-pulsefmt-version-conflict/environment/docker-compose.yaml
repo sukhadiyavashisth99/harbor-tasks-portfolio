@@ -1,0 +1,16 @@
+services:
+  main:
+    build:
+      context: ..
+      dockerfile: environment/Dockerfile
+    working_dir: /project
+    volumes:
+      - ..:/project
+
+  task:
+    build:
+      context: ..
+      dockerfile: environment/Dockerfile
+    working_dir: /project
+    volumes:
+      - ..:/project

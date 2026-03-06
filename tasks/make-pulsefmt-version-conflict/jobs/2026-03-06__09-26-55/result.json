@@ -1,0 +1,27 @@
+{
+    "id": "f0f02059-1413-423f-b31b-d804fd7289cb",
+    "started_at": "2026-03-06T09:26:55.120374",
+    "finished_at": "2026-03-06T09:27:01.681755",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "nop__adhoc": {
+                "n_trials": 0,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {},
+                "exception_stats": {
+                    "RewardFileNotFoundError": [
+                        "make-pulsefmt-version-conflict__Qx6yDpP"
+                    ]
+                }
+            }
+        }
+    }
+}

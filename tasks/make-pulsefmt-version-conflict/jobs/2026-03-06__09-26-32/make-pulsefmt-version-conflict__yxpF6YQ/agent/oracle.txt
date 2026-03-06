@@ -1,0 +1,11 @@
+rm -rf build
+mkdir -p build/obj
+gcc -Wall -Wextra -Werror -std=c11 -Ideps/pulsefmt-2.0/include -c src/main.c -o build/obj/main.o
+gcc -Wall -Wextra -Werror -std=c11 -Ideps/pulsefmt-2.0/include -c deps/pulsefmt-2.0/pulsefmt.c -o build/obj/pulsefmt.o
+mkdir -p build/lib
+ar rcs build/lib/libpulsefmt.a build/obj/pulsefmt.o
+mkdir -p build/bin
+gcc -Wall -Wextra -Werror -std=c11 build/obj/main.o build/lib/libpulsefmt.a -o build/bin/cache_audit
+CACHE_AUDIT_OK
+pulsefmt=2.0
+rendered=cache-audit:7:1048576
